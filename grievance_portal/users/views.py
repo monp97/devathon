@@ -15,7 +15,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
-            login(request, user)
+            print("i am here")
             return redirect("loginsignup")
         else:
             for msg in form.error_messages:
